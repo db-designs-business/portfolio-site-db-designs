@@ -4,7 +4,7 @@ Background Color (Black tone): #202326
 Primary Color  (Blue): #BFE2F9
 Pimrary Color Shadow (Dark Blue): #8EA8B9
 Primary Color Light (light Blue): #DAEFFC
-Text Color(White-Blue): #F1F9FE
+Text Color(White): #FDFDFD
 */
 
 body {
@@ -13,7 +13,7 @@ body {
   font-size: 16px;
   font-weight: 300;
   line-height: 1.6;
-  color: #F1F9FE;
+  color: #FDFDFD;
 }
 
 h1, h2, h3, h4, h5 {
