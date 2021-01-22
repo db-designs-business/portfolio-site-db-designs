@@ -13,13 +13,13 @@
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header id="header">
     <div class="container"> <a href="#">
-        <img src="img/logo-dominic-brecht.png" alt="dominic brecht logo">
+        <img src="img/logo-dominic-brecht.png" alt="dominic brecht logo" class="logo">
       </a>
       <nav>
         <ul>
@@ -31,9 +31,9 @@
     </div>
   </header>
 
-  <main id="work">
+  <main id="hero">
     <div>
-      <div>
+      <div class="container">
         <h3>Hi, my name is Dominic Brecht.
           <span>I'm a Visual Designer from Karlsruhe!</span>
         </h3>
@@ -41,17 +41,17 @@
       </div>
     </div>
 
-    <div>
-      <div>
+    <div class="work">
+      <div class="container">
         <h2>My Work</h2>
-        <div>
-          <div>
+        <div class="row">
+          <div class="column">
             <picture>
               <source srcset="img/clothecut/clothecut-preview.png" media="(max-width:767px)">
               <img src="img/clothecut/clothecut-preview@2.png" alt="Clothecut Showcase">
             </picture>
           </div>
-          <div>
+          <div class="column">
             <h4>CLOTHECUT</h4>
             <p class="darktext">App & Web Design
               <a href="clothecut.html" class="button">Read More</a>
@@ -59,17 +59,19 @@
           </div>
         </div>
 
-        <div>
-          <picture>
-            <source srcset="img/notepad/nodepad-preview.png" media="(max-width:767px)">
-            <img src="img/notepad/notepad-preview@2.png" alt="project 2 picture">
-          </picture>
-        </div>
-        <div>
-          <h4>NOTEPAD</h4>
-          <p class="darktext">App Design
-            <a href="notepad.html" class="button">Read More</a>
-          </p>
+        <div class="row">
+          <div class="column">
+            <picture>
+              <source srcset="img/notepad/nodepad-preview.png" media="(max-width:767px)">
+              <img src="img/notepad/notepad-preview@2.png" alt="project 2 picture">
+            </picture>
+          </div>
+          <div class="column">
+            <h4>NOTEPAD</h4>
+            <p class="darktext">App Design
+              <a href="notepad.html" class="button">Read More</a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -85,13 +87,13 @@
       <!--Social Media Layout and Placeholders-->
       <div>
         <ul>
-          <li><a href="https://www.facebook.com/" target="_blank">
+          <li><a href="https://www.facebook.com/" target="_blank" class="social">
               <i class="fab fa-facebook-square"></i>
             </a></li>
-          <li><a href="https://www.instagram.com/" target="_blank">
+          <li><a href="https://www.instagram.com/" target="_blank" class="social">
               <i class="fab fa-instagram"></i>
             </a></li>
-          <li><a href="https://www.behance.net/" target="_blank">
+          <li><a href="https://www.behance.net/" target="_blank" class="social">
               <i class="fab fa-behance-square"></i>
             </a></li>
         </ul>
