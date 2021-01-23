@@ -33,6 +33,7 @@ h1 {
 h2 {
   font-size: 1.953em;
   font-weight: 700;
+  margin: 0.5rem 0;
 }
 
 h3 {
@@ -44,11 +45,16 @@ h4 {
   font-size: 1.25em;
   font-weight: 700;
   text-transform: uppercase;
+  margin: 10px 0;
 }
 
 h5 {
   font-size: 1em;
   font-weight: 400;
+}
+
+p {
+  margin: 10px 0;
 }
 
 .darktext {
@@ -75,7 +81,7 @@ a:focus {
 }
 
 a:active {
-  color: #BFE2F9;
+  color: #DAEFFC;
 }
 
 .button {
@@ -85,7 +91,7 @@ a:active {
   color: #202326;
   font-weight: 400;
   padding: 10px;
-  border-radius: 3px;
+  border-radius: 5px;
   border-bottom: 2px solid #8EA8B9;
   transition: 0.2s opacity;
 }
@@ -112,14 +118,28 @@ a:active {
   color: #202326;
 }
 
+.mockup {
+  transition: 0.5s
+}
+
+.mockup:hover {
+  opacity: 0.7;
+}
+
+.berlin-illustration {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
 /* Layout Styling*/
 header {
-  background-color: #ffe4c4;
+  background-color: #202326;
   text-align: center;
   padding: 10px 0;
-  box-shadow: 0px 3px 11px 0px rgba(55, 50, 50, 0.5);
   position: fixed;
   width: 100%;
+  z-index: 999;
 }
 
 nav {
@@ -137,7 +157,8 @@ nav>ul>li {
 }
 
 nav>ul>li>a {
-  padding: 0 15px;
+  font-size: 14px;
+  padding: 0 10px;
   text-transform: uppercase;
   font-weight: 700;
   color: #BFE2F9;
@@ -145,11 +166,15 @@ nav>ul>li>a {
 }
 
 nav>ul>li>a:hover {
-  padding: 0 15px;
+  padding: 0 10px;
   text-transform: uppercase;
   font-weight: 700;
   color: #DAEFFC;
   text-decoration: none;
+}
+
+.button {
+  margin: 15px 0;
 }
 
 .container {
@@ -160,8 +185,8 @@ nav>ul>li>a:hover {
   margin: 25px 0;
 }
 
-#hero {
-  background-color: #ffe4c4;
+.centered {
+  text-align: center;
 }
 
 #hero .row {
@@ -171,16 +196,180 @@ nav>ul>li>a:hover {
 
 #hero h3 {
   text-align: center;
-  background-color: #ffe4c4;
+  background-color: #202326;
   padding: 20px 0;
   display: inline-block;
   width: 100%;
 }
 
 .logo {
-  max-width: 250px;
+  max-width: 150px;
 }
 
 main {
-  padding-top: 100px;
+  padding-top: 196px;
+}
+
+.social ul {
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+.social ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.social .fab {
+  font-size: 24px;
+}
+
+.button.contact {
+  margin: 15px 0;
+}
+
+footer {
+  text-align: center;
+}
+
+.language ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  font-size: 0.75em;
+}
+
+.language ul li {
+  display: inline-block;
+  margin: 0;
+  padding-left: 10px;
+  height: 40px;
+  width: 40px;
+}
+
+#about h2 {
+  margin: 5px;
+}
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+
+  nav>ul>li>a {
+    font-size: 16px;
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #BFE2F9;
+    text-decoration: none;
+  }
+
+  nav>ul>li>a:hover {
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #DAEFFC;
+    text-decoration: none;
+  }
+
+main {
+  padding-top: 275px;
+}
+
+.logo {
+max-width: 200px;
+}
+
+  #hero span {
+    display: block;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 10px;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  #about h2  {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  #about h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+  /* ==============================
+Large devices (1024px or larger)
+================================= */
+  @media only screen and (min-width: 1024px) {
+
+    main {
+      padding-top: 350px;
+    }
+
+.logo {
+  max-width: 300px;
+}
+  .col-lg-7 {
+    width: 58.33%;
+  }
+
+  .col-lg-5 {
+    width: 41.66%;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+  @keyframes color-change {
+    0% {fill: #edc655;}
+    50% {fill: #fcffad;}
+    100% {fill: #f76414;}
+  }
+
+  .sun {
+  animation: 4s color-change infinite alternate linear;
+  }
+
+  @keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+.mockup {
+  transition: transform 2000ms ease-in-out;
+  transform-origin: center;
+}
+
+.mockup:hover {
+  transform: scale(0.7);
 }
