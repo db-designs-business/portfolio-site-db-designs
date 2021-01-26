@@ -21,11 +21,11 @@ body {
 
 h1, h2, h3, h4, h5 {
   line-height: 1.3;
-  margin: 3rem 0 1.38rem;
+  margin: 1rem 0 1.38rem;
 }
 
 h1 {
-  margin-top: 0;
+  margin: 5px;
   font-size: 2.441em;
   font-weight: 700;
 }
@@ -45,7 +45,8 @@ h4 {
   font-size: 1.25em;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 10px 0;
+  margin-top: 1px;
+  margin-bottom: 0;
 }
 
 h5 {
@@ -59,6 +60,8 @@ p {
 
 .darktext {
   opacity: 0.6;
+  margin-top: 1px;
+  margin-bottom: 20px;
 }
 
 img {
@@ -135,30 +138,21 @@ a:active {
 /* Layout Styling*/
 header {
   background-color: #202326;
-  text-align: center;
+  text-align: left;
   padding: 10px 0;
   position: fixed;
   width: 100%;
   z-index: 999;
 }
 
-nav {
-  display: inline-block;
-  width: 100%;
-}
-
 nav>ul {
   list-style-type: none;
   padding: 0;
-}
-
-nav>ul>li {
-  display: inline-block;
+  margin: 0;
 }
 
 nav>ul>li>a {
-  font-size: 14px;
-  padding: 0 10px;
+  padding: 0 15px;
   text-transform: uppercase;
   font-weight: 700;
   color: #BFE2F9;
@@ -166,7 +160,6 @@ nav>ul>li>a {
 }
 
 nav>ul>li>a:hover {
-  padding: 0 10px;
   text-transform: uppercase;
   font-weight: 700;
   color: #DAEFFC;
@@ -181,8 +174,17 @@ nav>ul>li>a:hover {
   padding: 0 15px;
 }
 
+.section {
+  padding: 10px 0;
+}
+
 .row {
-  margin: 25px 0;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.column {
+  padding: 10px 0;
 }
 
 .centered {
@@ -203,11 +205,13 @@ nav>ul>li>a:hover {
 }
 
 .logo {
-  max-width: 150px;
+  margin-top: 2px;
+  max-width: 200px;
+  float: left;
 }
 
 main {
-  padding-top: 196px;
+  padding-top: 65px;
 }
 
 .social ul {
@@ -233,123 +237,81 @@ footer {
   text-align: center;
 }
 
-.language ul {
+.navtoggle li .language {
   margin: 0;
   padding: 0;
   list-style: none;
-  text-align: left;
+  text-align: right;
   font-size: 0.75em;
+  padding-top: 5px;
 }
 
-.language ul li {
+.navtoggle li .language {
   display: inline-block;
   margin: 0;
-  padding-left: 10px;
-  height: 40px;
-  width: 40px;
+  width: 25px;
 }
 
-#about h2 {
-  margin: 5px;
-}
-/* ==============================
-Medium devices (640px and larger)
-================================= */
-@media only screen and (min-width: 640px) {
-
-  nav>ul>li>a {
-    font-size: 16px;
-    padding: 0 15px;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #BFE2F9;
-    text-decoration: none;
-  }
-
-  nav>ul>li>a:hover {
-    padding: 0 15px;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #DAEFFC;
-    text-decoration: none;
-  }
-
-main {
-  padding-top: 275px;
+.navtoggle li:not(:last-child) {
+  display: none;
 }
 
-.logo {
-max-width: 200px;
+.navtoggle, .navtoggle.responsive {
+  position: relative;
 }
 
-  #hero span {
-    display: block;
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 4px;
+  font-size: 20px;
+}
+
+.navtoggle.responsive li {
+  display: block;
+}
+
+.navtoggle.responsive nav {
+  padding: 56px 0 0;
+}
+
+.navtoggle.responsive li {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(191, 226, 249, 0.3)
+}
+
+.navtoggle.responsive li:last-child {
+  padding: 0 0 10px;
+}
+
+/* Animations */
+@keyframes color-change {
+  0% {
+    fill: #edc655;
   }
 
-  .col-md-6 {
-    width: 50%;
+  50% {
+    fill: #fcffad;
   }
 
-  [class*="col-"] {
-    float: left;
-    padding: 10px;
-  }
-
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
-  #about h2  {
-    margin-top: 0;
-    margin-bottom: 5px;
-  }
-
-  #about h3 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+  100% {
+    fill: #f76414;
   }
 }
-  /* ==============================
-Large devices (1024px or larger)
-================================= */
-  @media only screen and (min-width: 1024px) {
 
-    main {
-      padding-top: 350px;
-    }
-
-.logo {
-  max-width: 300px;
-}
-  .col-lg-7 {
-    width: 58.33%;
-  }
-
-  .col-lg-5 {
-    width: 41.66%;
-  }
-
-  .container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-  @keyframes color-change {
-    0% {fill: #edc655;}
-    50% {fill: #fcffad;}
-    100% {fill: #f76414;}
-  }
-
-  .sun {
+.sun {
   animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
   }
 
-  @keyframes cloud-move {
-  from {transform: translate(0,50px);}
-  to {transform: translate(200px,50px);}
+  to {
+    transform: translate(200px, 50px);
+  }
 }
 
 .cloud-front {
@@ -357,8 +319,13 @@ Large devices (1024px or larger)
 }
 
 @keyframes cloud-move-reverse {
-  from {transform: translate(446px,48px);}
-  to {transform: translate(100px, 48px);}
+  from {
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    transform: translate(100px, 48px);
+  }
 }
 
 .cloud-back {
@@ -372,4 +339,113 @@ Large devices (1024px or larger)
 
 .mockup:hover {
   transform: scale(0.7);
+}
+
+/* ==============================
+Medium devices (641px and larger)
+================================= */
+@media only screen and (min-width: 641px) {
+  .header {
+    text-align: right;
+  }
+
+  .navtoggle.responsive li {
+    display: block;
+    text-align: right;
+    border-top: 0px;
+    }
+  }
+
+  .language>ul {
+    text-align: right;
+  }
+
+  nav>ul>li>a {
+    font-size: 16px;
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #BFE2F9;
+    text-decoration: none;
+    text-align: right;
+  }
+
+  nav>ul>li>a:last-child {
+    padding-right: 0;
+  }
+
+  nav>ul>li>a:hover {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #DAEFFC;
+    text-decoration: none;
+  }
+
+  #home span {
+    display: block;
+  }
+
+  .col-md-6 {
+    width: 50%;
+    padding: 20px;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 10px;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  #about h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .navtoggle li .icon {
+    position: absolute;
+    right: 25px;
+    top: 0px;
+    font-size: 25px;
+  }
+}
+
+/* ==============================
+Large devices (1025px or larger)
+================================= */
+@media only screen and (min-width: 1025px) {
+  .col-lg-7 {
+    width: 58.33%;
+  }
+
+  .col-lg-5 {
+    width: 41.66%;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav {
+    float: right;
+    width: auto;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  nav > ul {
+  margin: 1em 0;
+}
+
+nav > ul > li {
+  display: inline-block;
+}
 }
