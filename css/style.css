@@ -1,10 +1,9 @@
 /*
 Colors used:
-Background Color (Black tone): #202326
-Primary Color  (Blue): #BFE2F9
-Pimrary Color Shadow (Dark Blue): #8EA8B9
-Primary Color Light (light Blue): #DAEFFC
-Text Color(White): #FDFDFD
+Primary Color  (Gold): #D4AF37
+Secondary Color (White): #FDFDFD
+Text Color 1 (grey): #DAEFFC
+Text Color 2 (White): #3C3C3B
 */
 * {
   box-sizing: border-box;
@@ -69,22 +68,22 @@ img {
 }
 
 a {
-  color: #BFE2F9;
+  color: #3C3C3B;
   text-decoration: underline;
 }
 
 a:visited {
-  color: #BFE2F9;
+  color: #3C3C3B;
 }
 
 a:hover,
 a:focus {
-  color: #DAEFFC;
+  color: #8A8A89;
   text-decoration: underline;
 }
 
 a:active {
-  color: #DAEFFC;
+  color: #8A8A89;
 }
 
 .button {
@@ -111,14 +110,14 @@ a:active {
 
 .button.contact {
   background-color: transparent;
-  color: #BFE2F9;
+  color: #D4AF37;
   text-transform: uppercase;
-  border: 2px solid #BFE2F9;
+  border: 2px solid #D4AF37;
 }
 
 .button.contact:hover {
-  background-color: #BFE2F9;
-  color: #202326;
+  background-color: #D4AF37;
+  color: #FDFDFD;
 }
 
 .mockup {
@@ -129,40 +128,33 @@ a:active {
   opacity: 0.7;
 }
 
-.berlin-illustration {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-}
-
 /* Layout Styling*/
 header {
-  background-color: #202326;
-  text-align: left;
-  padding: 10px 0;
+  background-color: #FDFDFD;
+  text-align: right;
   position: fixed;
   width: 100%;
   z-index: 999;
+  padding: 10px;
 }
 
 nav>ul {
+  text-align: right;
   list-style-type: none;
-  padding: 0;
-  margin: 0;
 }
 
 nav>ul>li>a {
   padding: 0 15px;
   text-transform: uppercase;
   font-weight: 700;
-  color: #BFE2F9;
+  color: #3C3C3B;
   text-decoration: none;
 }
 
 nav>ul>li>a:hover {
   text-transform: uppercase;
   font-weight: 700;
-  color: #DAEFFC;
+  color: #3C3C3B;
   text-decoration: none;
 }
 
@@ -205,13 +197,12 @@ nav>ul>li>a:hover {
 }
 
 .logo {
-  margin-top: 2px;
-  max-width: 200px;
+  max-width: 220px;
   float: left;
 }
 
 main {
-  padding-top: 65px;
+  padding-top: 90px;
 }
 
 .social ul {
@@ -235,21 +226,6 @@ main {
 
 footer {
   text-align: center;
-}
-
-.navtoggle li .language {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-align: right;
-  font-size: 0.75em;
-  padding-top: 5px;
-}
-
-.navtoggle li .language {
-  display: inline-block;
-  margin: 0;
-  width: 25px;
 }
 
 .navtoggle li:not(:last-child) {
@@ -278,7 +254,7 @@ footer {
 .navtoggle.responsive li {
   display: block;
   padding: 10px 0;
-  border-top: 1px solid rgba(191, 226, 249, 0.3)
+  border-top: 1px solid rgba(60, 60, 59, 0.3)
 }
 
 .navtoggle.responsive li:last-child {
@@ -305,12 +281,8 @@ Medium devices (641px and larger)
   .navtoggle.responsive li {
     display: block;
     text-align: right;
-    border-top: 0px;
+    border-top: 0;
   }
-}
-
-.language>ul {
-  text-align: right;
 }
 
 nav>ul>li>a {
@@ -318,7 +290,7 @@ nav>ul>li>a {
   padding: 0 15px;
   text-transform: uppercase;
   font-weight: 700;
-  color: #BFE2F9;
+  color: #3C3C3B;
   text-decoration: none;
   text-align: right;
 }
@@ -330,7 +302,7 @@ nav>ul>li>a:last-child {
 nav>ul>li>a:hover {
   text-transform: uppercase;
   font-weight: 700;
-  color: #DAEFFC;
+  color: #8A8A89;
   text-decoration: none;
 }
 
@@ -391,6 +363,10 @@ Large devices (1025px or larger)
 
   .navtoggle li:not(:last-child) {
     display: inline-block;
+  }
+
+  .navtoggle li:last-child{
+    display: none;
   }
 
   nav>ul {
